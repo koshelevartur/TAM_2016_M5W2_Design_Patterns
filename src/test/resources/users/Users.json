@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "login": "tam2016m5w1u1@gmail.com",
+            "password": "mentoring"
+        },
+        {
+            "login": "tam2016m5w1u2@gmail.com",
+            "password": "mentoring2"
+        },
+        {
+            "login": "tam2016m5w1u3@gmail.com",
+            "password": "mentoring3"
+        }
+    ]
+}
