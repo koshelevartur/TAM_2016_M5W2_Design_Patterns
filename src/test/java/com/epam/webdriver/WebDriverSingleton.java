@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import ru.stqa.selenium.factory.WebDriverPool;
 
 /**
- * Created by Artur_Koshelev on 03.03.2017.
+ * Created by Artur_Koshelev.
  */
 public class WebDriverSingleton {
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     private WebDriverSingleton() {
 

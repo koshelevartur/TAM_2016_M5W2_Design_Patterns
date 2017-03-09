@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import org.testng.internal.collections.Pair;
 
 /**
- * Created by Artur_Koshelev on 02.03.2017.
+ * Created by Artur_Koshelev.
  */
 public class FirstUserCreator extends UserCreator {
     @Override

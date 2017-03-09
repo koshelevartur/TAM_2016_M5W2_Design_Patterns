@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by Artur_Koshelev on 03.03.2017.
+ * Created by Artur_Koshelev.
  */
 public class CustomDriverDecorator implements WebDriver {
     private WebDriver driver;

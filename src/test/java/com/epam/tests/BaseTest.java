@@ -20,7 +20,6 @@ import java.util.concurrent.TimeUnit;
  * Created by Artur_Koshelev.
  */
 public class BaseTest {
-    private static final String HUB_URL = "http://EPRUIZHW0273T1:4444/wd/hub";
     private static WebDriver driver;
     private static InheritableThreadLocal<TestData> testData = new InheritableThreadLocal<>();
     private static final int IMPLICIT_WAIT_TIMEOUT = 10;

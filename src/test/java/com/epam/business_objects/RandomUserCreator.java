@@ -8,7 +8,7 @@ import org.testng.internal.collections.Pair;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Created by Artur_Koshelev on 02.03.2017.
+ * Created by Artur_Koshelev.
  */
 public class RandomUserCreator extends UserCreator {
     @Override

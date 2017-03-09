@@ -2,10 +2,10 @@ package com.epam.pages.signin;
 
 import com.epam.pages.AbstractPage;
 import com.epam.pages.main.MainPage;
-import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by Artur_Koshelev.
