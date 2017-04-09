@@ -2,7 +2,7 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Google Mail tests" verbose="1" parallel="tests">
+<suite name="Google Mail tests">
     <test name="Chrome_Windows">
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="Chrome"/>
@@ -10,6 +10,20 @@
             <package name="com.epam.tests.steps"/>
         </packages>
     </test>
+    <!--<test name="Firefox_Windows">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="Firefox"/>
+        <packages>
+            <package name="com.epam.tests.steps"/>
+        </packages>
+    </test>
+    <test name="InternetExplorer_Windows">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="Internet Explorer"/>
+        <packages>
+            <package name="com.epam.tests.steps"/>
+        </packages>
+    </test>-->
     <!--<test name="Chrome_Linux">
         <parameter name="os" value="Linux"/>
         <parameter name="browser" value="Chrome"/>
@@ -17,23 +31,9 @@
             <package name="com.epam.tests.steps"/>
         </packages>
     </test>-->
-    <!--<test name="Firefox_Windows">
-        <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="Firefox"/>
-        <packages>
-            <package name="com.epam.tests.steps"/>
-        </packages>
-    </test>-->
     <!--<test name="Firefox_Linux">
         <parameter name="os" value="Linux"/>
         <parameter name="browser" value="Firefox"/>
-        <packages>
-            <package name="com.epam.tests.steps"/>
-        </packages>
-    </test>-->
-    <!--<test name="InternetExplorer_Windows">
-        <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="Internet Explorer"/>
         <packages>
             <package name="com.epam.tests.steps"/>
         </packages>
