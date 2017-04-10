@@ -4,8 +4,8 @@
 
 <suite name="Google Mail tests">
     <test name="Chrome_Windows">
-        <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="os" value="WINDOWS"/>
+        <parameter name="browser" value="CHROME"/>
         <packages>
             <package name="com.epam.tests.steps"/>
         </packages>

@@ -1,5 +1,6 @@
 package com.epam.tests.steps;
 
+import com.epam.config.TestData;
 import com.epam.pages.signin.SignInPage;
 import com.epam.tests.BaseTest;
 import org.testng.Assert;
@@ -17,6 +18,11 @@ public class Login extends BaseTest {
         return new Object[][] {
                 {getTestData().getLogin(), getTestData().getPassword()}
         };
+    }
+
+    @BeforeClass
+    public void openGmail() {
+        getDriver().get(TestData.LOGIN_PAGE);
     }
 
     @BeforeClass
