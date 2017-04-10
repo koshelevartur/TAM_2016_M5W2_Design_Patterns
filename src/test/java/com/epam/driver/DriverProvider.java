@@ -18,11 +18,13 @@ public class DriverProvider {
     private DriverProvider() {
     }
 
-    public static void createDriver(String os, String browser) {
-        if (driver == null) {
+    public static void createDriver(String os, DriverType browser) {
+        if (getDriver() == null) {
             System.out.println("Creating new driver for " + browser + " on " + os);
-            DesiredCapabilities capabilities = DriverType.valueOf(browser.toUpperCase()).getCapCreator().FactoryMethod();
+
+            DesiredCapabilities capabilities = browser.getCapCreator().FactoryMethod();
             capabilities.setCapability(CapabilityType.PLATFORM, Platform.valueOf(os.toUpperCase()));
+
             driver.set(WebDriverPool.DEFAULT.getDriver(capabilities));
             driver.get().manage().timeouts().implicitlyWait(IMPLICIT_WAIT_TIMEOUT, TimeUnit.SECONDS);
         }

@@ -23,6 +23,7 @@ public class TestData {
         targetEmailAddress = "tam2016m4w3@yandex.ru";
         emailSubject = UUID.randomUUID().toString();
         emailBody = "WebDriver Test Body";
+        printTestData();
     }
 
     public String getLogin() {
@@ -45,7 +46,7 @@ public class TestData {
         return emailBody;
     }
 
-    public void printTestData() {
+    private void printTestData() {
         System.out.println("Current test data:");
         System.out.println("Login: " + userCredentials.first());
         System.out.println("Password: " + userCredentials.second());

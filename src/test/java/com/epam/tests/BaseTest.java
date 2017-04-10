@@ -2,6 +2,7 @@ package com.epam.tests;
 
 import com.epam.config.TestData;
 import com.epam.driver.DriverProvider;
+import com.epam.driver.DriverType;
 import com.epam.utils.CustomDriverDecorator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -16,17 +17,13 @@ import java.net.MalformedURLException;
  */
 public class BaseTest {
     private static InheritableThreadLocal<TestData> testData = new InheritableThreadLocal<>();
-    static {
-        TestData td = new TestData();
-        td.printTestData();
-        testData.set(td);
-    }
 
-    @BeforeTest(alwaysRun = true)
+    @BeforeTest
     @Parameters({"os","browser"})
     public void setUp(@Optional ("Windows") String os,
-                      @Optional ("Chrome") String browser) throws MalformedURLException {
+                      @Optional ("Chrome") DriverType browser) throws MalformedURLException {
         DriverProvider.createDriver(os, browser);
+        testData.set(new TestData());
     }
 
     protected WebDriver getDriver() {
