@@ -42,7 +42,7 @@ public class CustomDriverDecorator implements WebDriver {
     public WebElement findElement(By by) {
         //System.out.println("TEST " + by.toString());
         WebElement webElement = driver.findElement(by);
-        String bg  = webElement.getCssValue("backgroundColor");
+        String bg = webElement.getCssValue("backgroundColor");
         JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].style.border = '3px " + "solid DeepPink" + "'", webElement);
         try {

@@ -23,6 +23,6 @@ public class RandomUserCreator extends UserCreator {
             System.out.println(e.getMessage());
             System.exit(1);
         }
-        return Pair.create(login,password);
+        return Pair.create(login, password);
     }
 }

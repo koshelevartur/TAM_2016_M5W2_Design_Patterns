@@ -17,9 +17,9 @@ public class BaseTest {
     private static InheritableThreadLocal<TestData> testData = new InheritableThreadLocal<>();
 
     @BeforeTest(alwaysRun = true)
-    @Parameters({"os","browser"})
-    public void setUp(@Optional ("Windows") String os,
-                      @Optional ("Chrome") DriverType browser) throws MalformedURLException {
+    @Parameters({"os", "browser"})
+    public void setUp(@Optional("Windows") String os,
+                      @Optional("Chrome") DriverType browser) throws MalformedURLException {
         DriverProvider.createDriver(os, browser);
         testData.set(new TestData());
     }

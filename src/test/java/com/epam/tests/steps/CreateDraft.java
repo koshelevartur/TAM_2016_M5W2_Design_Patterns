@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class CreateDraft extends BaseTest {
     @DataProvider(name = "New email fields")
     private Object[][] newEmailFields() {
-        return new Object[][] {
+        return new Object[][]{
                 {getTestData().getTargetEmailAddress(), getTestData().getEmailSubject(), getTestData().getEmailBody()}
         };
     }

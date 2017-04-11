@@ -15,5 +15,6 @@ public class AbstractPage {
         waitForPageLoading();
     }
 
-    protected void waitForPageLoading() {}
+    protected void waitForPageLoading() {
+    }
 }

@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class SendMail extends BaseTest {
     @DataProvider(name = "Email subject")
     private Object[][] emailSubject() {
-        return new Object[][] {
+        return new Object[][]{
                 {getTestData().getEmailSubject()}
         };
     }

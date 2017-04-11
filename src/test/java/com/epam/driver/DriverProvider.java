@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit;
  * Created by Artur_Koshelev.
  */
 public class DriverProvider {
-    private static InheritableThreadLocal<WebDriver> driver = new InheritableThreadLocal<>();
     private static final int IMPLICIT_WAIT_TIMEOUT = 5;
+    private static InheritableThreadLocal<WebDriver> driver = new InheritableThreadLocal<>();
 
     private DriverProvider() {
     }

@@ -10,8 +10,8 @@ import java.util.UUID;
  * Created by Artur_Koshelev.
  */
 public class TestData {
-    public static final String LOGIN_PAGE  = "https://gmail.com";
-    private Pair<String,String> userCredentials;
+    public static final String LOGIN_PAGE = "https://gmail.com";
+    private Pair<String, String> userCredentials;
     private String targetEmailAddress;
     private String emailSubject;
     private String emailBody;

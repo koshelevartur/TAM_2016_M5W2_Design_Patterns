@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class Login extends BaseTest {
     @DataProvider(name = "Authorization data")
     private Object[][] authorizationData() {
-        return new Object[][] {
+        return new Object[][]{
                 {getTestData().getLogin(), getTestData().getPassword()}
         };
     }
@@ -31,7 +31,7 @@ public class Login extends BaseTest {
         System.out.println("Logging in...");
     }
 
-    @Parameters({"login","password"})
+    @Parameters({"login", "password"})
     @Test(dataProvider = "Authorization data")
     public void login(String login, String password) {
         Assert.assertTrue(new SignInPage(DriverProvider.getDriver()).loginToGMail(login, password).loginIsCorrect(login), "Login error!");

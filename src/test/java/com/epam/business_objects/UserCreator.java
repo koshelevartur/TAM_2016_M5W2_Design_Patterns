@@ -11,6 +11,6 @@ public abstract class UserCreator {
     int testUserId;
     String userCredentialsFile = "src/test/resources/users/Users.json";
 
-    public abstract Pair<String,String> FactoryMethod();
+    public abstract Pair<String, String> FactoryMethod();
 }
 
