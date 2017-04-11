@@ -9,15 +9,15 @@ import java.io.IOException;
  */
 public class JsonUtils {
     public static String getJsonString(String fileName) throws IOException {
-        String jsonString = "";
+        StringBuilder jsonString = new StringBuilder();
         String line;
         try (BufferedReader in = new BufferedReader(new FileReader(fileName))) {
             while ((line = in.readLine()) != null) {
-                jsonString = jsonString + line;
+                jsonString.append(line);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        return jsonString;
+        return jsonString.toString();
     }
 }

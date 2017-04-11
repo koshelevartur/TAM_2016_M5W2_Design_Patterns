@@ -1,6 +1,7 @@
 package com.epam.tests.steps;
 
 import com.epam.config.TestData;
+import com.epam.driver.DriverProvider;
 import com.epam.pages.signin.SignInPage;
 import com.epam.tests.BaseTest;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class Login extends BaseTest {
 
     @BeforeClass
     public void openGmail() {
-        getDriver().get(TestData.LOGIN_PAGE);
+        DriverProvider.getDriver().get(TestData.LOGIN_PAGE);
     }
 
     @BeforeClass
@@ -33,7 +34,7 @@ public class Login extends BaseTest {
     @Parameters({"login","password"})
     @Test(dataProvider = "Authorization data")
     public void login(String login, String password) {
-        Assert.assertTrue(new SignInPage(getDriver()).loginToGMail(login, password).loginIsCorrect(login), "Login error!");
+        Assert.assertTrue(new SignInPage(DriverProvider.getDriver()).loginToGMail(login, password).loginIsCorrect(login), "Login error!");
         System.out.println("Login was completed correctly.");
     }
 }

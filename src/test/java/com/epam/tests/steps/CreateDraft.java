@@ -1,5 +1,6 @@
 package com.epam.tests.steps;
 
+import com.epam.driver.DriverProvider;
 import com.epam.pages.drafts.DraftsPage;
 import com.epam.pages.main.MainPage;
 import com.epam.tests.BaseTest;
@@ -28,14 +29,14 @@ public class CreateDraft extends BaseTest {
     @Parameters({"to", "subject", "body"})
     @Test(dependsOnMethods = {"com.epam.tests.steps.Login.login"}, dataProvider = "New email fields")
     public void createDraft(String to, String subject, String body) {
-        Assert.assertTrue(new MainPage(getDriver()).createDraft(to, subject, body).openDraftsPage().isDraftPresent(subject), "Draft not created!");
+        Assert.assertTrue(new MainPage(DriverProvider.getDriver()).createDraft(to, subject, body).openDraftsPage().isDraftPresent(subject), "Draft not created!");
         System.out.println("Draft successfully created.");
     }
 
     @Parameters({"to", "subject", "body"})
     @Test(dependsOnMethods = {"createDraft"}, dataProvider = "New email fields")
     public void verifyDraft(String to, String subject, String body) {
-        Assert.assertTrue(new DraftsPage(getDriver()).isDraftCorrect(to, subject, body), "Draft is incorrect!");
+        Assert.assertTrue(new DraftsPage(DriverProvider.getDriver()).isDraftCorrect(to, subject, body), "Draft is incorrect!");
         System.out.println("Draft is correct.");
     }
 }

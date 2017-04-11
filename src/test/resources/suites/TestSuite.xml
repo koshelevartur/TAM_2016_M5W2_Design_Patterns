@@ -4,35 +4,35 @@
 
 <suite name="Google Mail tests" parallel="tests">
     <test name="Chrome_Windows">
-        <parameter name="os" value="Windows"/>
+        <parameter name="os" value="WINDOWS"/>
         <parameter name="browser" value="CHROME"/>
         <packages>
             <package name="com.epam.tests.steps"/>
         </packages>
     </test>
-    <test name="Firefox_Windows">
-        <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="FIREFOX"/>
-        <packages>
-            <package name="com.epam.tests.steps"/>
-        </packages>
-    </test>
     <test name="InternetExplorer_Windows">
-        <parameter name="os" value="Windows"/>
+        <parameter name="os" value="WINDOWS"/>
         <parameter name="browser" value="IE"/>
         <packages>
             <package name="com.epam.tests.steps"/>
         </packages>
     </test>
+    <test name="Firefox_Windows">
+        <parameter name="os" value="WINDOWS"/>
+        <parameter name="browser" value="FIREFOX"/>
+        <packages>
+            <package name="com.epam.tests.steps"/>
+        </packages>
+    </test>
     <!--<test name="Chrome_Linux">
-        <parameter name="os" value="Linux"/>
+        <parameter name="os" value="LINUX"/>
         <parameter name="browser" value="Chrome"/>
         <packages>
             <package name="com.epam.tests.steps"/>
         </packages>
     </test>-->
     <!--<test name="Firefox_Linux">
-        <parameter name="os" value="Linux"/>
+        <parameter name="os" value="LINUX"/>
         <parameter name="browser" value="Firefox"/>
         <packages>
             <package name="com.epam.tests.steps"/>

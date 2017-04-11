@@ -1,5 +1,6 @@
 package com.epam.driver;
 
+import com.epam.utils.CustomDriverDecorator;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -13,17 +14,17 @@ import java.util.concurrent.TimeUnit;
  */
 public class DriverProvider {
     private static InheritableThreadLocal<WebDriver> driver = new InheritableThreadLocal<>();
-    private static final int IMPLICIT_WAIT_TIMEOUT = 10;
+    private static final int IMPLICIT_WAIT_TIMEOUT = 5;
 
     private DriverProvider() {
     }
 
     public static void createDriver(String os, DriverType browser) {
-        if (getDriver() == null) {
+        if (driver.get() == null) {
             System.out.println("Creating new driver for " + browser + " on " + os);
 
             DesiredCapabilities capabilities = browser.getCapCreator().FactoryMethod();
-            capabilities.setCapability(CapabilityType.PLATFORM, Platform.valueOf(os.toUpperCase()));
+            capabilities.setCapability(CapabilityType.PLATFORM, Platform.valueOf(os));
 
             driver.set(WebDriverPool.DEFAULT.getDriver(capabilities));
             driver.get().manage().timeouts().implicitlyWait(IMPLICIT_WAIT_TIMEOUT, TimeUnit.SECONDS);
@@ -31,6 +32,6 @@ public class DriverProvider {
     }
 
     public static WebDriver getDriver() {
-        return driver.get();
+        return new CustomDriverDecorator(driver.get());
     }
 }
